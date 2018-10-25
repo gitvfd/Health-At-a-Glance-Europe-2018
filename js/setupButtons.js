@@ -20,6 +20,8 @@ function setupButtons() {
 		window.open("index_access.html", "_self")
 		else if (buttonId== "quality")
 		window.open("index_quality.html", "_self")
+        else if (buttonId== "careResources")
+        window.open("index_expenditure.html", "_self")
         // Toggle the bubble chart based on
         // the currently clicked button.
         //draw(buttonId);
