@@ -220,7 +220,7 @@ test="#"+topicSelected;
 
 		var minValue = d3.min(data, function(d) { return parseFloat(d.value); });
 		var maxValue = d3.max(data, function(d) { return parseFloat(d.value); });
-console.log(minValue)
+
 		if(topicSelected=="MLifeExp" ||  topicSelected=="FLifeExp" ||  topicSelected=="TLifeExp" ||  topicSelected=="LIRepHltg" || topicSelected=="HIRepHltg" || topicSelected=="TRepHltg")
 			x.domain([minValue,maxValue]) ;
 		else
