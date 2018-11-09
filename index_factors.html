@@ -16,7 +16,7 @@
 <div class="button  " id="careResources">Health expenditure </div>
 </div>
 <Br/>
-<div class="topicExplanation">Smoking, alcohol consumption and obesity are three major risk factors for noncommunicable diseases. Population exposure to air pollution is also a critical non-medical determinant of health.<br/>All data refer to 2015 or nearest year.
+<div class="topicExplanation">Smoking, alcohol consumption and obesity are three major risk factors for noncommunicable diseases.<br/> All data refer to 2016 or nearest year, except for obesity among adults (the data refer to 2014).
 </div>
 <Br/>
 <div class="selector">Highlight a country: 
@@ -328,7 +328,7 @@ test="#"+topicSelected;
 					return height/2-12;
 			})
 			.style("text-anchor","middle")
-			.html(function(d){
+			.text(function(d){
 				if(d.ISO==countrySel || d.ISO=="EU28"|| d.ISO=="EU23"){ 
 	            //if(d.value!=minValue && d.value!=maxValue ){
 
