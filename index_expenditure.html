@@ -76,7 +76,7 @@
 <br/>
 <div class="sector" id="QualityCare">
 	<div class="compareChart">
-		<div class="metadata" tooltip="USD per capita - 2017 or nearest year">Health expenditure per capita
+		<div class="metadata" tooltip="EUR per capita - 2017 or nearest year">Health expenditure per capita
 		</div>
 		<span id="hlthExpCap"></span>
 	</div>
@@ -272,8 +272,13 @@ test="#"+topicSelected;
 				  	
 			})
 			.text(function(d){
-				if((d.value==minValue  )&& (d.ISO!=countrySel))
-					return format(d.value) ;
+				if((d.value==minValue  )&& (d.ISO!=countrySel)){
+		            if (topicSelected=="hlthExpCap" )
+						return formatNumber(d.value) ;
+		            else if((topicSelected=="hlthExpGDP" ) )
+						return format(d.value) ;
+				}
+
 	      })
 
 		circleGroup.append("text")
@@ -295,8 +300,12 @@ test="#"+topicSelected;
 				  	
 			})
 			.text(function(d){
-				if(( d.value==maxValue )&& (d.ISO!=countrySel))
-					return format(d.value) ;
+				if(( d.value==maxValue )&& (d.ISO!=countrySel)){
+		            if (topicSelected=="hlthExpCap" )
+						return formatNumber(d.value) ;
+		            else if((topicSelected=="hlthExpGDP" ) )
+						return format(d.value) ;
+				}
 	      })
 
 		//EU28 and Country annotation/
@@ -316,7 +325,7 @@ test="#"+topicSelected;
 
 				if(d.ISO==countrySel || d.ISO=="EU28"){ 
 		            if (topicSelected=="hlthExpCap" )
-		              return  d.Country+ " (" + format(d.value) + " USD Per capita"+")";
+		              return  d.Country+ " (" + formatNumber(d.value) + " EUR Per capita"+")";
 		            else if((topicSelected=="hlthExpGDP" ) )
 						return d.Country+ " (" + format(d.value) + " % of GDP"+")";
 					else
@@ -354,7 +363,7 @@ test="#"+topicSelected;
 		     d3.select("#valueTooltip")
 		        .text(function(){
 			        if (topicSelected=="hlthExpCap" )
-		              return  format(d.value) + " USD per capita";
+		              return  formatNumber(d.value) + " EUR per capita";
 		            else if(( topicSelected=="hlthExpGDP" ))
 						return format(d.value) + " % of GDP";
         	});
