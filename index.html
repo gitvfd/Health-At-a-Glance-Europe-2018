@@ -114,6 +114,10 @@
 <Br/>
 
 <div id="footer">The statistical data for Israel are supplied by and under the responsibility of the relevant Israeli authorities. The use of such data by the OECD is without prejudice to the status of the Golan Heights, East Jerusalem and Israeli settlements in the West Bank under the terms of international law.
+</div><div id="footerCyprus">
+	The information in this document with reference to “Cyprus” relates to the southern part of the Island. There is no single authority representing both Turkish and Greek Cypriot people on the Island. Turkey recognises the Turkish Republic of Northern Cyprus (TRNC). Until a lasting and equitable solution is found within the context of the United Nations, Turkey shall preserve its position concerning the “Cyprus issue”.
+	<br />Note by all the European Union Member States of the OECD and the European Union:
+	<br />The Republic of Cyprus is recognised by all members of the United Nations with the exception of Turkey. The information in this document relates to the area under the effective control of the Government of the Republic of Cyprus.
 </div>
 
 <div class="button btn_share" id="shareLink">
@@ -462,6 +466,13 @@ function highlightCountry(codeISO){
   		d3.select("#footer")
   			.style("visibility","hidden");
   	}
+		if (codeISO == "CYP") {
+		d3.select("#footerCyprus")
+			.style("visibility", "visible");
+	} else {
+		d3.select("#footerCyprus")
+			.style("visibility", "hidden");
+	}
 }
 
 var e = document.getElementById("dropDownButton");
