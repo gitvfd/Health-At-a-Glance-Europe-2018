@@ -24,7 +24,7 @@ body{
 }
 img{vertical-align:middle}
 
-#footer{
+#footer,#footerCyprus{
 	float:left;
 	width:80%;
 	font-family: TheSerif;
@@ -33,6 +33,7 @@ img{vertical-align:middle}
 	font-style:italic;
 	font-weight: 100;
 }
+
 
 .legend{
   clear: both; 
@@ -118,7 +119,7 @@ clear: both; float: left; display: block; position: relative;
 font-family:TheSerif;
 font-size: 1.75vw;
 /**color:#8EA4B1;**/
-margin-top: :3px;
+margin-top: 3px;
 }
 
 .title{
